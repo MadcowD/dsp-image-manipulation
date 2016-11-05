@@ -17,7 +17,7 @@ class pyfilter:
         self.grey = True
         return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 
-    def gausKernel(self, sz=15, sigma=3):
+    def gausKernel(self, sz=5, sigma=1):
         kernel = np.zeros((sz,sz))
         x = - sz // 2 + 1
         add = sz //2
@@ -33,7 +33,7 @@ class pyfilter:
         self.GK = kernel
         return self.GK
 
-    def meanFilt(self, sz = 15):
+    def meanFilt(self, sz = 3):
         x = np.ones((sz, sz))
         self.AB = x / sum(sum(x))
         return self.AB
