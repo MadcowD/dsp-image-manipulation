@@ -1,9 +1,5 @@
-import sys
-import os
 import numpy as np
 import scipy.ndimage
-import scipy
-import imageio
 import matplotlib.image as mpimg
 
 class pyfilter:
